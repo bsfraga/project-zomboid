@@ -42,7 +42,7 @@ jobs:
         with:
           push: true
           tags: |
-            ahava/project-zomboid:${{ steps.version_tag.outputs.tag }}
-            ghcr.io/ahava/project-zomboid:${{ steps.version_tag.outputs.tag }}
+            mismatch/project-zomboid:${{ steps.version_tag.outputs.tag }}
+            ghcr.io/crc-mismatch/project-zomboid:${{ steps.version_tag.outputs.tag }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
