@@ -3,12 +3,12 @@ name: Docker Image CI
 on:
   push:
     branches:
-      - feature/mod-support
+      - main
     tags:
       - v[0-9]+.[0-9]+.[0-9]+
   pull_request:
     branches:
-      - feature/mod-support
+      - main
 
 jobs:
   main:
@@ -42,9 +42,7 @@ jobs:
         with:
           push: true
           tags: |
-            mismatch/project-zomboid:mod-support-${{ steps.version_tag.outputs.tag }}
-            mismatch/project-zomboid:mod-support-latest
-            ghcr.io/crc-mismatch/project-zomboid:mod-support-${{ steps.version_tag.outputs.tag }}
-            ghcr.io/crc-mismatch/project-zomboid:mod-support-latest
+            mismatch/project-zomboid:${{ steps.version_tag.outputs.tag }}
+            ghcr.io/crc-mismatch/project-zomboid:${{ steps.version_tag.outputs.tag }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
