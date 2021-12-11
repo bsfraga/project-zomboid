@@ -134,6 +134,8 @@ Some variables are inherited from [cyrale/linuxgsm](https://github.com/cyrale/li
 - **SERVER_PUBLIC_DESC** Public description of your server
 - **SERVER_BRANCH** Name of the beta branch
 - **SERVER_BETA_PASSWORD** Password for the beta branch
+- **SERVER_MODS** Mod IDs list, separated by `;`
+- **SERVER_WORKSHOP_ITEMS** Mod Steam Workshop IDs list, separated by `;`
 - **ADMIN_PASSWORD** Admin password on your server
 - **SERVER_PORT** Game server port
 - **PLAYER_PORTS** Game ports to allow player to contact the server (by default : 16262-16272 to allow 10 players)
