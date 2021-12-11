@@ -67,4 +67,7 @@ then
     sed -ri "s/^SteamPort2=([0-9]+)$/SteamPort2=${STEAM_PORT_2}/" "${server_ini_file}"
     sed -ri "s/^RCONPort=([0-9]+)$/RCONPort=${RCON_PORT}/" "${server_ini_file}"
     sed -ri "s/^RCONPassword=(.*)$/RCONPassword=${RCON_PASSWORD}/" "${server_ini_file}"
+    
+    sed -ri "s/^Mods=(.*)$/Mods=${SERVER_MODS}/" "${server_ini_file}"
+    sed -ri "s/^WorkshopItems=(.*)$/WorkshopItems=${SERVER_WORKSHOP_ITEMS}/" "${server_ini_file}"
 fi
