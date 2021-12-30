@@ -36,6 +36,6 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/:${{ secrets.DOCKER_HUB_USERNAME }}/:${{ secrets.DOCKER_HUB_REPOSITORY }}:${{ steps.version_tag.outputs.tag }}
+            ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:${{ steps.version_tag.outputs.tag }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
